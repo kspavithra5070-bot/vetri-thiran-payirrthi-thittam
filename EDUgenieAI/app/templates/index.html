@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EduGenie - AI Learning Assistant</title>
+
+    <!-- CSS FILE -->
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- HEADER -->
+        <header class="hero">
+
+            <div>
+                <p class="eyebrow">
+                    AI Learning Assistant
+                </p>
+
+                <h1>EduGenie</h1>
+
+                <p class="description">
+                    Ask questions, understand difficult concepts,
+                    generate quizzes, summarize content and create
+                    personalized learning paths.
+                </p>
+            </div>
+
+            <span id="status" class="status">
+                Checking API...
+            </span>
+
+        </header>
+
+
+        <!-- INPUT CARD -->
+        <section class="card">
+
+            <!-- TASK SELECTION -->
+            <label for="task">
+                Choose a task
+            </label>
+
+            <select id="task">
+
+                <option value="qa">
+                    Ask a Question
+                </option>
+
+                <option value="explain">
+                    Explain a Topic
+                </option>
+
+                <option value="quiz">
+                    Generate Quiz
+                </option>
+
+                <option value="summarize">
+                    Summarize Content
+                </option>
+
+                <option value="learn">
+                    Learning Recommendations
+                </option>
+
+            </select>
+
+
+            <!-- TOPIC INPUT -->
+            <div id="topicWrap" class="hidden">
+
+                <label for="topic">
+                    Topic
+                </label>
+
+                <input
+                    id="topic"
+                    type="text"
+                    placeholder="Example: Binary Trees"
+                >
+
+            </div>
+
+
+            <!-- LEARNING LEVEL -->
+            <div id="levelWrap" class="hidden">
+
+                <label for="level">
+                    Learning Level
+                </label>
+
+                <select id="level">
+
+                    <option value="beginner">
+                        Beginner
+                    </option>
+
+                    <option value="intermediate">
+                        Intermediate
+                    </option>
+
+                    <option value="advanced">
+                        Advanced
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- TEXT INPUT -->
+            <label id="inputLabel" for="inputText">
+                Question
+            </label>
+
+            <textarea
+                id="inputText"
+                rows="9"
+                placeholder="Example: What is a computer?"
+            ></textarea>
+
+
+            <!-- SUBMIT BUTTON -->
+            <button id="submitBtn" type="button">
+                Generate
+            </button>
+
+        </section>
+
+
+        <!-- RESULT CARD -->
+        <section
+            id="resultCard"
+            class="card result-card hidden"
+        >
+
+            <div class="result-head">
+
+                <h2>Result</h2>
+
+                <button
+                    id="copyBtn"
+                    type="button"
+                    class="secondary"
+                >
+                    Copy
+                </button>
+
+            </div>
+
+            <div id="result"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT FILE -->
+    <script src="/static/app.js"></script>
+
+</body>
+
+</html>
